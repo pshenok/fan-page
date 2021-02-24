@@ -54,9 +54,15 @@ const PAGE_NAME = process.env.FB_PAGE_NAME;
 
     const createPageElement = await page.$('[aria-label="Create Page"]');
     await createPageElement.click();
+		console.log("page created");
 
-    console.log("page created");
+		await page.waitForTimeout(5000);
+
+		const uploadImageElement = await page.$('[aria-label="Add Profile Picture"]');
+		await uploadImageElement.click();
   };
+
+
   await login(LOGIN, PASSWORD);
   await createFanPage(PAGE_NAME);
 })();
