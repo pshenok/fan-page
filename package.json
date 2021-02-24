@@ -1,0 +1,24 @@
+{
+  "name": "fan-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pshenok/fan-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pshenok/fan-page/issues"
+  },
+  "homepage": "https://github.com/pshenok/fan-page#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "puppeteer": "^7.1.0"
+  }
+}
