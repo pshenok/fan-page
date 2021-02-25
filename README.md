@@ -9,4 +9,6 @@ FB_PASS=example-pass-123
 FB_PAGE_NAME="Dogecoin Fans"
 ```
 
-Start the script `node index.js`.
+Run the scripts: 
+`yarn instal`
+`yarn start`
