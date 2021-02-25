@@ -10,5 +10,5 @@ FB_PAGE_NAME="Dogecoin Fans"
 ```
 
 Run the scripts: 
-`yarn instal`
+`yarn install`
 `yarn start`
