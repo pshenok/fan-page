@@ -58,10 +58,14 @@ const PAGE_NAME = process.env.FB_PAGE_NAME;
 		
 		// upload img
 
-		// await page.waitForTimeout(5000);
+		await page.waitForTimeout(5000);
 
-		// const uploadImageElement = await page.$('[aria-label="Add Profile Picture"]');
-		// await uploadImageElement.click();
+		const fileInputElement = await page.$("input[type=file]");
+		await fileInputElement.uploadFile('./dc.jpg');
+
+		const saveElement = await page.$('[aria-label="Save"]');
+		await saveElement.click();
+		console.log("Image added");
   };
 
 
