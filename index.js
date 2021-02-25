@@ -37,29 +37,31 @@ const PAGE_NAME = process.env.FB_PAGE_NAME;
     const pageNameElement = await pageNameLable.evaluateHandle(
       (e) => e.firstChild.firstChild.lastChild
     );
-    await pageNameElement.type(PAGE_NAME);
+    await pageNameElement.type(pageName);
 
     const categoryLable = await page.$('[aria-label="Category (required)"]');
     const categoryInputElement = await categoryLable.evaluateHandle(
       (e) => e.firstChild.firstChild.lastChild.lastChild
     );
-    await categoryInputElement.type(PAGE_NAME);
+    await categoryInputElement.type('economy');
     await categoryInputElement.click();
     await categoryInputElement.click();
 
     await page.waitForTimeout(2000);
 
     const categories = await page.$$('[role="option"]');
-    await categories[categories.length - 1].click();
+    await categories[0].click();
 
     const createPageElement = await page.$('[aria-label="Create Page"]');
     await createPageElement.click();
 		console.log("page created");
+		
+		// upload img
 
-		await page.waitForTimeout(5000);
+		// await page.waitForTimeout(5000);
 
-		const uploadImageElement = await page.$('[aria-label="Add Profile Picture"]');
-		await uploadImageElement.click();
+		// const uploadImageElement = await page.$('[aria-label="Add Profile Picture"]');
+		// await uploadImageElement.click();
   };
 
 
